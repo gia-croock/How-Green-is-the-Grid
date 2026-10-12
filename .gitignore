@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+
+# Kept local, not part of the submission
+SPEC.md
+CLAUDE.md
+*.pdf

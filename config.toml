@@ -1,0 +1,30 @@
+# Data to display: "api" (live Elexon data), or a JSON file path for offline use, e.g. "data/sample.json".
+data_source = "api"
+
+[baseline]
+mode = "dynamic"       # "dynamic" (average of the last lookback_days) or "static"
+static_percent = 27    # static mode, and the fallback; NESO 2025: gas 26.8%, no coal (see README)
+lookback_days = 7      # used by dynamic mode and the API fetch
+
+# Fuel ratings from the brief: "green", "not_green" or "neutral".
+[fuel_ratings]
+BIOMASS = "green"
+CCGT = "not_green"
+COAL = "not_green"
+INTELEC = "neutral"
+INTEW = "neutral"
+INTFR = "neutral"
+INTGRNL = "neutral"
+INTIFA2 = "neutral"
+INTIRL = "neutral"
+INTNED = "neutral"
+INTNEM = "neutral"
+INTNSL = "neutral"
+INTVKL = "neutral"
+NPSHYD = "green"
+NUCLEAR = "green"
+OCGT = "not_green"
+OIL = "not_green"
+OTHER = "neutral"
+PS = "green"
+WIND = "green"

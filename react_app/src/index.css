@@ -1,0 +1,137 @@
+/* Colours and type in one place */
+:root {
+  --background: #f3f5f4;
+  --text: #1f2a2e;
+  --muted: #5e6b70; /* caption, legend */
+  --green: #2e7d32; /* same as the Streamlit version */
+  --red: #c62828;
+
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.caption {
+  margin: 0 0 12px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* The verdict banner: the one bold element on the page */
+.verdict {
+  padding: 28px 32px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.verdict-normal {
+  background: var(--green);
+}
+
+.verdict-high {
+  background: var(--red);
+}
+
+.verdict h1 {
+  margin: 0 0 4px;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.verdict p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+/* Donut and fossil scale side by side, stacked on narrow screens */
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 640px) {
+  .charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart {
+  margin: 0;
+  min-width: 0; /* lets the chart shrink inside the grid */
+}
+
+.chart h2 {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+}
+
+.donut {
+  position: relative;
+}
+
+.donut-centre {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: var(--muted);
+  pointer-events: none; /* hovering still reaches the slices */
+}
+
+.donut-centre strong {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+/* Loading, error and no-data messages */
+.notice {
+  margin: 0;
+  color: var(--muted);
+}
+
+.notice-error {
+  color: var(--red);
+}
