@@ -2,6 +2,10 @@
 
 A small widget that shows how green Great Britain's electricity is right now, and suggests reducing or delaying energy use when fossil fuel use is higher than normal. It uses live generation data from Elexon.
 
+**Live app:** [How Green is the Grid](https://how-green-is-the-grid-bnfdvgikqjnaj4zftm6jqh.streamlit.app/)
+
+To run the app locally, follow the steps in [Quick start](#quick-start) below.
+
 ![Screenshot of the widget](docs/widget-screenshot.png)
 
 ## Quick start
